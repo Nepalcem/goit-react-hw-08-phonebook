@@ -26,15 +26,43 @@ export const register = createAsyncThunk(
 
 export const logIn = createAsyncThunk(
   'authorize/login',
-  async (credentials, thunkAPI) => {}
+  async (credentials, thunkAPI) => {
+    try {
+      const response = await axios.post('/users/login', credentials);
+      setAuthorizeHeader(response.data.token);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
 );
 
 export const logOut = createAsyncThunk(
   'authorize/logout',
-  async (_, thunkAPI) => {}
+  async (_, thunkAPI) => {
+    try {
+      await axios.post('/users/logout');
+      clearAuthorizeHeader();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
 );
 
 export const refreshUser = createAsyncThunk(
   'authorize/refresh',
-  async (_, thunkAPI) => {}
+  async (_, thunkAPI) => {
+    const { token } = thunkAPI.getState().authorize;
+
+    if (!token) {
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
+    setAuthorizeHeader(token);
+    try {
+      const response = await axios.get('/users/current');
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
 );

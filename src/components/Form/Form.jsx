@@ -17,7 +17,7 @@ const Form = () => {
     if (e.currentTarget.name === 'name') {
       setName(e.currentTarget.value);
     } else {
-      setNumber(e.currentTarget.value.trim());
+      setNumber(e.currentTarget.value);
     }
   };
 

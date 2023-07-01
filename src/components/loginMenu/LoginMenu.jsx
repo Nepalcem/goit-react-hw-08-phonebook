@@ -5,7 +5,7 @@ function LoginMenu() {
   return (
     <div>
       <NavLink to="/register"> Register</NavLink>
-      <button type="button">Log In</button>
+      <NavLink to="/login">Log In</NavLink>
     </div>
   );
 }

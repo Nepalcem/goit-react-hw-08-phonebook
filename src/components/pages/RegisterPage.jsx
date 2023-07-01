@@ -12,16 +12,14 @@ function RegisterPage() {
       email: e.target.elements.email.value,
       password: e.target.elements.password.value,
     };
-    console.log(userObject);
-    dispatch(
-      register(userObject)
-    );
+
+    dispatch(register(userObject));
     e.target.reset();
   };
 
   return (
     <div>
-      <h2>RegisterPage</h2>
+      <h2>Register Page</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Username

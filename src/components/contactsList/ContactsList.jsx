@@ -2,17 +2,20 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { ContactsStyled } from './ContactsList.styled';
 import StyledTrashIcon from './TrashIcon.styled';
-import { getVisibleContacts } from 'redux/selectors';
+import { getError, getIsLoading, getVisibleContacts } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 import { deleteContact } from 'api-functions/api';
 
 const ContactsList = () => {
   const dispatch = useDispatch();
+  const isLoading = useSelector(getIsLoading);
+    const errorMessage = useSelector(getError);
 
   const contacts = useSelector(getVisibleContacts);
   return (
     <div className="contacts">
       <h2>Contacts List:</h2>
+      {isLoading && !errorMessage && <b>Request in progress...</b>}
       <ContactsStyled>
         {contacts.map(({ name, id, number }) => (
           <li key={id} className="item">
