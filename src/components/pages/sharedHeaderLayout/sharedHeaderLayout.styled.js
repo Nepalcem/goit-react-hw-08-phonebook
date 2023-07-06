@@ -18,6 +18,7 @@ export const Header = styled.header`
 
   > nav {
     display: flex;
+    gap: 5px;
   }
 `;
 
@@ -27,14 +28,19 @@ export const Logo = styled.p`
 `;
 
 export const Link = styled(NavLink)`
-  padding: 8px 16px;
+  max-height: 38px;
+  display: block;
+  padding: 12px 16px;
   border-radius: 4px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 500;
-
+  background-color: rgb(81, 203, 238);
+  &:hover {
+    box-shadow: 0 0 10px rgba(81, 203, 238, 0.8),
+      0 0 20px rgba(81, 203, 238, 0.6), 0 0 30px rgba(81, 203, 238, 0.4);
+  }
   &.active {
-    color: white;
-    background-color: orangered;
+    text-decoration: underline;
   }
 `;

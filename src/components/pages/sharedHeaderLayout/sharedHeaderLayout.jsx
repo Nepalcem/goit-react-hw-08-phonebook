@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet} from 'react-router-dom';
 import { Container, Header, Link } from './sharedHeaderLayout.styled';
 import { Suspense } from 'react';
 import { useAuthorize } from 'components/hooks/useAuthorize';
@@ -14,7 +14,7 @@ export const SharedHeaderLayout = () => {
       <Header>
         <nav>
           <Link to="/">Home</Link>
-          {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink> }
+          {isLoggedIn && <Link to="/contacts">Contacts</Link> }
           {isLoggedIn ? <UserMenu /> : <LoginMenu />}
         </nav>
       </Header>

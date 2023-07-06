@@ -2,6 +2,8 @@ import React from 'react';
 import { useAuthorize } from 'components/hooks/useAuthorize';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/authorize/operations';
+import { UserGreetingText, LogOutButton, UserMenuDiv } from './UserMenu.styled';
+import { FiLogOut } from 'react-icons/fi';
 
 function UserMenu() {
   const dispatch = useDispatch();
@@ -10,12 +12,12 @@ function UserMenu() {
   const handleLogout = () => dispatch(logOut());
 
   return (
-    <div>
-      <p>Welcome, {user.name}</p>
-      <button type="button" onClick={handleLogout}>
-        Log Out
-      </button>
-    </div>
+    <UserMenuDiv>
+      <UserGreetingText>Welcome, {user.name}</UserGreetingText>
+      <LogOutButton type="button" onClick={handleLogout}>
+        <FiLogOut /> LOGOUT
+      </LogOutButton>
+    </UserMenuDiv>
   );
 }
 
