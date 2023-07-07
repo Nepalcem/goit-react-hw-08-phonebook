@@ -1,12 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { RegisterIcon,LoginIcon,LoginMenuDiv } from './LoginMenu.styled';
+import { LoginLink } from './LoginMenu.styled';
 
 function LoginMenu() {
   return (
-    <div>
-      <NavLink to="/register"> Register</NavLink>
-      <NavLink to="/login">Log In</NavLink>
-    </div>
+    <LoginMenuDiv>
+      <LoginLink to="/register"> <RegisterIcon/> <span>Register</span></LoginLink>
+      <LoginLink to="/login"> <LoginIcon/> <span>Log In</span></LoginLink>
+    </LoginMenuDiv>
   );
 }
 
