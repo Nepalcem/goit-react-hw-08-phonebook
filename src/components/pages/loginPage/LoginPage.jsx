@@ -1,35 +1,28 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/authorize/operations';
-import { RegisterForm, FormTextField, FormButton } from './RegisterPage.styled';
+import { logIn } from 'redux/authorize/operations';
+import {
+  RegisterForm,
+  FormTextField,
+  FormButton,
+} from '../registerPage/RegisterPage.styled';
 
-function RegisterPage() {
+function LoginPage() {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
-    const userObject = {
-      name: e.target.elements.name.value,
+    const userLogInObject = {
       email: e.target.elements.email.value,
       password: e.target.elements.password.value,
     };
-
-    dispatch(register(userObject));
+    dispatch(logIn(userLogInObject));
     e.target.reset();
   };
-
   return (
     <div>
-      <h2>Registration Page</h2>
+      <h2>Login Page</h2>
       <RegisterForm onSubmit={handleSubmit}>
-        <FormTextField
-          type="text"
-          name="name"
-          label="Username"
-          variant="outlined"
-          required
-        />
-
         <FormTextField
           type="email"
           name="email"
@@ -44,10 +37,11 @@ function RegisterPage() {
           variant="outlined"
           required
         />
-        <FormButton type="submit">Register</FormButton>
+
+        <FormButton type="submit">Log In</FormButton>
       </RegisterForm>
     </div>
   );
 }
 
-export default RegisterPage;
+export default LoginPage;
