@@ -5,6 +5,7 @@ import { LuLoader2 } from 'react-icons/lu';
 import { addContact } from 'api-functions/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, getIsAddContactPending } from 'redux/selectors';
+import { FormTextField } from 'components/pages/registerPage/RegisterPage.styled';
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -52,33 +53,30 @@ const Form = () => {
     <FormStyled onSubmit={submitHandler}>
       <h1>PhoneBook</h1>
       <div className="form__inputs">
-        <label>
-          <p>Name:</p>
-          <input
-            type="text"
-            name="name"
-            pattern="^[A-Za-z\u0080-\uFFFF ']+$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-            onChange={handleChange}
-            value={name}
-            autoComplete="off"
-          />
-        </label>
-
-        <label>
-          <p>Phone:</p>
-          <input
-            type="tel"
-            name="number"
-            pattern="^(\+?[0-9.\(\)\-\s]*)$"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-            onChange={handleChange}
-            value={number}
-            autoComplete="off"
-          />
-        </label>
+        <FormTextField
+          type="text"
+          name="name"
+          pattern="^[A-Za-z\u0080-\uFFFF ']+$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+          onChange={handleChange}
+          value={name}
+          autoComplete="off"
+          label="Name"
+          variant="outlined"
+        />
+        <FormTextField
+          type="tel"
+          name="number"
+          pattern="^(\+?[0-9.\(\)\-\s]*)$"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+          onChange={handleChange}
+          value={number}
+          autoComplete="off"
+          label="Phone"
+          variant="outlined"
+        />
 
         <button type="submit" disabled={isAddContactLoading}>
           {isAddContactLoading ? (

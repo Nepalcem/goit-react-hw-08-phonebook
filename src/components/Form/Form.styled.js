@@ -13,7 +13,7 @@ export const FormStyled = styled.form`
     display: inline-block;
     margin-right: 10px;
   }
-  & .form__inputs input {
+  /* & .form__inputs input {
     max-width: 150px;
     transition: all 0.3s ease-in-out;
     outline: none;
@@ -28,9 +28,13 @@ export const FormStyled = styled.form`
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid rgba(81, 203, 238, 1);
-  }
+  } */
 
   & .form__inputs button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+    font-weight: 500;
     background-color: rgb(81, 203, 238);
     color: white;
     padding: 0px 15px;
@@ -40,7 +44,7 @@ export const FormStyled = styled.form`
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    height: 30px;
+    height: 36px;
     display: flex;
     align-items: center;
     gap: 10px;
