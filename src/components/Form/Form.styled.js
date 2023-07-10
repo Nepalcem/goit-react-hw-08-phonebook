@@ -8,27 +8,16 @@ export const FormStyled = styled.form`
     gap: 15px;
     align-items: baseline;
     flex-direction: column;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
   & .form__inputs p {
     display: inline-block;
     margin-right: 10px;
   }
-  /* & .form__inputs input {
-    max-width: 150px;
-    transition: all 0.3s ease-in-out;
-    outline: none;
-    padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-  }
-  & .form__inputs input:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid rgba(81, 203, 238, 1);
-  } */
+
 
   & .form__inputs button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
