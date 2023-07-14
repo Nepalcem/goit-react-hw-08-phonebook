@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, getIsAddContactPending } from 'redux/selectors';
 import { FormTextField } from 'components/pages/registerPage/RegisterPage.styled';
 
+
 const Form = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -51,7 +52,6 @@ const Form = () => {
 
   return (
     <FormStyled onSubmit={submitHandler}>
-      <h1>PhoneBook</h1>
       <div className="form__inputs">
         <FormTextField
           type="text"
@@ -87,6 +87,7 @@ const Form = () => {
           Add Contact
         </button>
       </div>
+      
     </FormStyled>
   );
 };

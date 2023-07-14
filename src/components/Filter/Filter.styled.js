@@ -5,6 +5,7 @@ export const FilterStyled = styled.form`
     display: flex;
     gap: 20px;
     align-items: baseline;
+    font-weight: 500;
   }
   & input {
     max-width: 150px;

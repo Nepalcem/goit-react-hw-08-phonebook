@@ -8,10 +8,7 @@ export const FormStyled = styled.form`
     gap: 15px;
     align-items: baseline;
     flex-direction: column;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
   }
   & .form__inputs p {
     display: inline-block;
