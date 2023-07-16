@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { ContactsStyled } from './ContactsList.styled';
 import StyledTrashIcon from './TrashIcon.styled';
+import StyledEditIcon from './EditIcon.styled';
 import { getError, getIsLoading, getVisibleContacts } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 import { deleteContact } from 'api-functions/api';
@@ -23,6 +24,7 @@ const ContactsList = () => {
               {name.charAt(0).toUpperCase() + name.slice(1)}
             </span>
             : <span>{number} </span>
+            <StyledEditIcon/>
             <StyledTrashIcon
               onClick={() => {
                 dispatch(deleteContact(id));
