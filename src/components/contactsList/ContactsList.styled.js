@@ -4,20 +4,37 @@ export const ContactsStyled = styled.ul`
   display: flex;
   flex-direction: column;
 
-  
+  & .contact__data {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
   & .item {
     width: 320px;
-    padding: 10px 20px;
+    padding: 6px 20px;
     margin-bottom: 15px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     transition: box-shadow 0.25s ease-in-out;
     background-color: white;
+    & .contact__data {
+      flex-grow: 1;
+      align-items: flex-start;
+    }
   }
+  & .name {
+    font-weight: 500;
+  }
+  & .phone {
+    font-style: italic;
+  }
+  /* & .item span {
+    flex: 1;
+  } */
   & .item:hover .name {
     animation: tilt-shaking 0.25s infinite;
   }
@@ -44,7 +61,7 @@ export const ContactsStyled = styled.ul`
   }
 
   & button {
-    background-color: #EE4B2B;
+    background-color: #ee4b2b;
     color: white;
     padding: 0px 15px;
     border: none;
