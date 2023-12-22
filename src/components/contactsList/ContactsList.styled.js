@@ -32,9 +32,7 @@ export const ContactsStyled = styled.ul`
   & .phone {
     font-style: italic;
   }
-  /* & .item span {
-    flex: 1;
-  } */
+
   & .item:hover .name {
     animation: tilt-shaking 0.25s infinite;
   }
