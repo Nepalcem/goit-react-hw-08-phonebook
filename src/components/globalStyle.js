@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import bgImage from '../components/media/images/notebook_paper.jpg';
 
 export const GlobalStyle = createGlobalStyle`
 body {
@@ -9,20 +10,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5;
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0) 79px,
-      #abced4 79px,
-      #abced4 81px,
-      rgba(0, 0, 0, 0) 81px
-    ),
-    linear-gradient(#eee 0.1em, rgba(0, 0, 0, 0) 0.1em);
+
+    background: url(${bgImage});
   background-position: 0 0;
-  background-repeat: repeat;
-  background-size: 100% 53.39px;
-  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: scroll;
   background-origin: padding-box;
-  background-clip: border-box;
+  background-clip: border-box; */
 }
 
 code {
