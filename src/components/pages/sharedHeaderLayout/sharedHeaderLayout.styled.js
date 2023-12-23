@@ -9,9 +9,6 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
@@ -43,6 +40,7 @@ export const Link = styled(NavLink)`
   color: white;
   font-weight: 500;
   background-color: rgb(81, 203, 238);
+  transition: all 0.25s ease-in-out;
   &:hover {
     box-shadow: 0 0 10px rgba(81, 203, 238, 0.8),
       0 0 20px rgba(81, 203, 238, 0.6), 0 0 30px rgba(81, 203, 238, 0.4);

@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/authorize/operations';
 import { RegisterForm, FormTextField, FormButton } from './RegisterPage.styled';
+import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
 
 function RegisterPage() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function RegisterPage() {
   };
 
   return (
-    <div>
+    <ContentBlock>
       <h2>Registration Page</h2>
       <RegisterForm onSubmit={handleSubmit}>
         <FormTextField
@@ -46,7 +47,7 @@ function RegisterPage() {
         />
         <FormButton type="submit">Register</FormButton>
       </RegisterForm>
-    </div>
+    </ContentBlock>
   );
 }
 

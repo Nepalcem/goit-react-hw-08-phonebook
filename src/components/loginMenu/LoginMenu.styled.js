@@ -4,7 +4,7 @@ import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 
 export const LoginLink = styled(NavLink)`
   color: white;
-  padding: 5px 10px;
+  padding: 12px 16px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -14,8 +14,9 @@ export const LoginLink = styled(NavLink)`
   display: flex;
   align-items: baseline;
   line-height: unset;
+  transition: all 0.25s ease-in-out;
   & span {
-    margin-left: 20px;
+    margin-left: 25px;
   }
   &:hover {
     background-color: rgb(81, 203, 238);
@@ -26,12 +27,12 @@ export const LoginLink = styled(NavLink)`
 
 export const RegisterIcon = styled(FaUserPlus)`
   position: absolute;
-  margin-top: 1px;
+  margin-top: 3px;
 `;
 
 export const LoginIcon = styled(FaSignInAlt)`
   position: absolute;
-  margin-top: 1px;
+  margin-top: 3px;
 `;
 
 export const LoginMenuDiv = styled.div`

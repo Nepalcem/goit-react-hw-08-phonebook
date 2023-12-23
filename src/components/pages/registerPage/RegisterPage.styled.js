@@ -34,6 +34,7 @@ export const FormButton = styled.button`
   font-weight: 500;
   font-size: 16px;
   background-color: rgb(81, 203, 238);
+  transition: all 0.25s ease-in-out;
   &:hover {
     box-shadow: 0 0 10px rgba(81, 203, 238, 0.8),
       0 0 20px rgba(81, 203, 238, 0.6), 0 0 30px rgba(81, 203, 238, 0.4);

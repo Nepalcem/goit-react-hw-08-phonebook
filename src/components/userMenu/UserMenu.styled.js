@@ -18,6 +18,7 @@ export const LogOutButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
+  transition: all 0.25s ease-in-out;
   &:hover {
     background-image: linear-gradient(to right, rgb(238, 75, 43), #ff5500);
   }

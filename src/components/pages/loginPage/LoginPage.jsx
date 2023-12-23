@@ -6,6 +6,7 @@ import {
   FormTextField,
   FormButton,
 } from '../registerPage/RegisterPage.styled';
+import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
 
 function LoginPage() {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function LoginPage() {
     e.target.reset();
   };
   return (
-    <div>
+    <ContentBlock>
       <h2>Login Page</h2>
       <RegisterForm onSubmit={handleSubmit}>
         <FormTextField
@@ -40,7 +41,7 @@ function LoginPage() {
 
         <FormButton type="submit">Log In</FormButton>
       </RegisterForm>
-    </div>
+    </ContentBlock>
   );
 }
 
