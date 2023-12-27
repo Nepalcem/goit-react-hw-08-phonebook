@@ -1,32 +1,22 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { register } from 'redux/authorize/operations';
-// import * as Yup from 'yup';
+import React, { useState } from 'react';
+
 import { RegisterForm, FormTextField, FormButton } from './SignupForm.styled';
 
-export default function SignupForm() {
-  const dispatch = useDispatch();
+export default function SignupForm({ isLogin, onSubmit }) {
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const userObject = {
-      name: e.target.elements.name.value,
-      email: e.target.elements.email.value,
-      password: e.target.elements.password.value,
-    };
 
-    dispatch(register(userObject));
-    e.target.reset();
-  };
+
   return (
-    <RegisterForm onSubmit={handleSubmit}>
-      <FormTextField
-        type="text"
-        name="name"
-        label="Username"
-        variant="outlined"
-        required
-      />
+    <RegisterForm onSubmit={onSubmit}>
+      {!isLogin && (
+        <FormTextField
+          type="text"
+          name="name"
+          label="Username"
+          variant="outlined"
+          required
+        />
+      )}
 
       <FormTextField
         type="email"
@@ -42,7 +32,7 @@ export default function SignupForm() {
         variant="outlined"
         required
       />
-      <FormButton type="submit">Register</FormButton>
+      <FormButton type="submit">{isLogin ? 'Login' : 'Register'}</FormButton>
     </RegisterForm>
   );
 }

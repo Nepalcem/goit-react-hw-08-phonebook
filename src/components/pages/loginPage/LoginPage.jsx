@@ -1,12 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/authorize/operations';
-import {
-  RegisterForm,
-  FormTextField,
-  FormButton,
-} from '../registerPage/RegisterPage.styled';
+
 import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
+import SignupForm from 'components/SignupForm/SignupForm';
 
 function LoginPage() {
   const dispatch = useDispatch();
@@ -23,7 +20,8 @@ function LoginPage() {
   return (
     <ContentBlock>
       <h2>Login Page</h2>
-      <RegisterForm onSubmit={handleSubmit}>
+      <SignupForm isLogin={true} onSubmit={handleSubmit} />
+      {/* <RegisterForm onSubmit={handleSubmit}>
         <FormTextField
           type="email"
           name="email"
@@ -40,7 +38,7 @@ function LoginPage() {
         />
 
         <FormButton type="submit">Log In</FormButton>
-      </RegisterForm>
+      </RegisterForm> */}
     </ContentBlock>
   );
 }
