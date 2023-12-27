@@ -43,3 +43,9 @@ export const FormButton = styled.button`
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 `;
+
+export const ErrorMessageStyled = styled.div`
+  font-size: 14px;
+  line-height: calc(14 / 12);
+  color: #da1414;
+`;
