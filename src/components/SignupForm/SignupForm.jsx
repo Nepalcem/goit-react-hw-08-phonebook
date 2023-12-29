@@ -33,9 +33,9 @@ export default function SignupForm({ isLogin, onSubmit }) {
       password: '',
     },
     validationSchema,
-    onSubmit: (values) => {
-      onSubmit(values);
-      formik.resetForm();
+    onSubmit: (values,actions) => {
+      onSubmit(values,actions);
+
     },
   });
 

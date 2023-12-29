@@ -4,22 +4,18 @@ import SignupForm from 'components/SignupForm/SignupForm';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/authorize/operations';
 
-
 function RegisterPage() {
-  
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-
-    dispatch(register(e));
-
+  const handleSubmit = (values, actions) => {
+    dispatch(register(values));
+    actions.resetForm();
   };
-
 
   return (
     <ContentBlock>
       <h2>Registration Page</h2>
-      <SignupForm isLogin={false} onSubmit={handleSubmit}/>
+      <SignupForm isLogin={false} onSubmit={handleSubmit} />
     </ContentBlock>
   );
 }
