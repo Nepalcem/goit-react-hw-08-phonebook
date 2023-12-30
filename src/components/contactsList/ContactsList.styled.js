@@ -10,7 +10,6 @@ export const ContactsStyled = styled.ul`
     gap: 4px;
   }
   & .item {
-    width: 320px;
     padding: 6px 20px;
     margin-bottom: 10px;
     border-radius: 4px;

@@ -11,13 +11,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5;
 
-    background: url(${bgImage});
-  background-position: 0 0;
+    background-image: url(${bgImage});
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: scroll;
-  background-origin: padding-box;
-  background-clip: border-box; */
+  /* background-size: contain; */
+  /* @media screen and (m) */
+
 }
 
 code {

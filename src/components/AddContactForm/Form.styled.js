@@ -8,13 +8,11 @@ export const FormStyled = styled.form`
     gap: 15px;
     align-items: baseline;
     flex-direction: column;
-
   }
   & .form__inputs p {
     display: inline-block;
     margin-right: 10px;
   }
-
 
   & .form__inputs button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -34,6 +32,7 @@ export const FormStyled = styled.form`
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.25s ease-in-out;
   }
 
   & .loading-icon {
