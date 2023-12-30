@@ -14,7 +14,7 @@ function RegisterPage() {
 
   return (
     <ContentBlock>
-      <h2>Registration Page</h2>
+      <h2>Please Register..</h2>
       <SignupForm isLogin={false} onSubmit={handleSubmit} />
     </ContentBlock>
   );

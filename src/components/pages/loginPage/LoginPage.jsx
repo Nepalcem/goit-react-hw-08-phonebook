@@ -15,7 +15,7 @@ function LoginPage() {
   };
   return (
     <ContentBlock>
-      <h2>Login Page</h2>
+      <h2>Login to your Account</h2>
       <SignupForm isLogin={true} onSubmit={handleSubmit} />
     </ContentBlock>
   );
