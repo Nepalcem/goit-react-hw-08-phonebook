@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import bgImage from '../components/media/images/notebook_paper.jpg';
+import { desktop } from 'utils/deviceBreakPoints';
 
 export const GlobalStyle = createGlobalStyle`
 body {
@@ -11,12 +12,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5;
 
-    background-image: url(${bgImage});
+  background-image: url(${bgImage});
   background-repeat: repeat;
-  /* background-size: cover; */
-  /* background-size: contain; */
-  /* @media screen and (m) */
-
+  @media screen and (min-width: ${desktop}) {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 code {
