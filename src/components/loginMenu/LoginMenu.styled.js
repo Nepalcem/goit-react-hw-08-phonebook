@@ -4,7 +4,7 @@ import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 
 export const LoginLink = styled(NavLink)`
   color: white;
-  padding: 12px 16px;
+  padding: 12px 9px;
   border: none;
   border-radius: 10px;
   cursor: pointer;

@@ -1,5 +1,10 @@
-import { Outlet} from 'react-router-dom';
-import { Container, Header, Link,StyledNav } from './sharedHeaderLayout.styled';
+import { Outlet } from 'react-router-dom';
+import {
+  Container,
+  Header,
+  NavigationLink,
+  StyledNav
+} from './sharedHeaderLayout.styled';
 import { Suspense } from 'react';
 import { useAuthorize } from 'components/hooks/useAuthorize';
 import UserMenu from 'components/userMenu/UserMenu';
@@ -12,9 +17,11 @@ export const SharedHeaderLayout = () => {
   return (
     <Container>
       <Header>
-        <StyledNav alignItemsBaseline={showLoginMenu}> 
-          <Link to="/">Home</Link>
-          {isLoggedIn && <Link to="/contacts">Contacts</Link> }
+        <StyledNav alignItemsBaseline={showLoginMenu}>
+            <NavigationLink to="/">Home</NavigationLink>
+            {isLoggedIn && (
+              <NavigationLink to="/contacts">Contacts</NavigationLink>
+            )}
           {isLoggedIn ? <UserMenu /> : <LoginMenu />}
         </StyledNav>
       </Header>

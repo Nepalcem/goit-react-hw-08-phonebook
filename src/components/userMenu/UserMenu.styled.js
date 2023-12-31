@@ -8,6 +8,8 @@ export const UserMenuDiv = styled.div`
 
 export const UserGreetingText = styled.p`
   font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 4px;
 `;
 
 export const LogOutButton = styled.button`

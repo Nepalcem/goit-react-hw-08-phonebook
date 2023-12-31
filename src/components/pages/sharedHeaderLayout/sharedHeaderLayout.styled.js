@@ -30,8 +30,8 @@ export const Logo = styled.p`
   margin: 0;
 `;
 
-export const Link = styled(NavLink)`
-  max-height: 38px;
+export const NavigationLink = styled(NavLink)`
+  max-height: 24px;
   display: block;
   padding: 12px 16px;
   border-radius: 4px;

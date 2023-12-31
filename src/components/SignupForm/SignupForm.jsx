@@ -18,7 +18,8 @@ export default function SignupForm({ isLogin, onSubmit }) {
       })
     : Yup.object({
         name: Yup.string()
-          .min(5, 'Must be at least 5 characters')
+        .min(5, 'Must be at least 5 characters')
+        .max(12, 'Must contain no longer than 12 characters')
           .required('Required'),
         email: Yup.string().email('Invalid email address').required('Required'),
         password: Yup.string()

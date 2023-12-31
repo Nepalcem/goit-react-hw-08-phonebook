@@ -12,8 +12,8 @@ body {
   background-color: #f5f5f5;
 
     background-image: url(${bgImage});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  /* background-size: cover; */
   /* background-size: contain; */
   /* @media screen and (m) */
 

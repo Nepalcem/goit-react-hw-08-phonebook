@@ -13,7 +13,7 @@ function UserMenu() {
 
   return (
     <UserMenuDiv>
-      <UserGreetingText>Welcome, {user.name}</UserGreetingText>
+      <UserGreetingText>Hi, {user.name}</UserGreetingText>
       <LogOutButton type="button" onClick={handleLogout}>
         <FiLogOut /> LOGOUT
       </LogOutButton>
