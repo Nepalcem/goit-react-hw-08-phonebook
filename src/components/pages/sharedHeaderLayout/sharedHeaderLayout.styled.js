@@ -5,6 +5,7 @@ export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   padding: 16px;
+  width: 480px;
 `;
 
 export const Header = styled.header`
@@ -40,6 +41,9 @@ export const NavigationLink = styled(NavLink)`
   font-weight: 500;
   background-color: rgb(81, 203, 238);
   transition: all 0.25s ease-in-out;
+  &:nth-child(n+2) {
+    margin-right: auto;
+  }
   &:hover {
     box-shadow: 0 0 10px rgba(81, 203, 238, 0.8),
       0 0 20px rgba(81, 203, 238, 0.6), 0 0 30px rgba(81, 203, 238, 0.4);
