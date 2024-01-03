@@ -52,7 +52,6 @@ const Form = () => {
 
   return (
     <FormStyled onSubmit={submitHandler}>
-      <div className="form__inputs">
         <FormTextField
           type="text"
           name="name"
@@ -86,7 +85,7 @@ const Form = () => {
           )}{' '}
           Add Contact
         </button>
-      </div>
+
       
     </FormStyled>
   );

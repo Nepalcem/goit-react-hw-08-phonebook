@@ -1,11 +1,19 @@
 import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { tablet } from 'utils/deviceBreakPoints';
+import { desktop } from 'utils/deviceBreakPoints';
 
 export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   padding: 16px;
   width: 480px;
+  @media screen and (min-width: ${tablet}) and (max-width: ${desktop}) {
+    width: 600px;
+  }
+  @media screen and (min-width: ${desktop}) {
+    width: 960px;
+  }
 `;
 
 export const Header = styled.header`

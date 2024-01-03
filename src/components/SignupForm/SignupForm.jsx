@@ -9,6 +9,18 @@ import {
 import { useFormik } from 'formik';
 
 export default function SignupForm({ isLogin, onSubmit }) {
+
+  const initialFormValues = isLogin
+    ? {
+        email: 'testphonebook@test.com',
+        password: 'qwerty1',
+      }
+    : {
+        name: '',
+        email: '',
+        password: '',
+      };
+
   const validationSchema = isLogin
     ? Yup.object({
         email: Yup.string().email('Invalid email address').required('Required'),
@@ -28,15 +40,10 @@ export default function SignupForm({ isLogin, onSubmit }) {
       });
 
   const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      password: '',
-    },
+    initialValues: initialFormValues,
     validationSchema,
-    onSubmit: (values,actions) => {
-      onSubmit(values,actions);
-
+    onSubmit: (values, actions) => {
+      onSubmit(values, actions);
     },
   });
 

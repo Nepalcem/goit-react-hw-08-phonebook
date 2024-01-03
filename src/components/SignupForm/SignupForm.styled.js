@@ -5,6 +5,8 @@ export const RegisterForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 400px;
+  margin: 30px auto;
 `;
 
 export const FormTextField = styled(TextField)`
