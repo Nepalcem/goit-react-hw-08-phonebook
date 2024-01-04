@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const FormStyled = styled.form`
-  margin-bottom: 20px;
-    display: flex;
-    gap: 15px;
-    align-items: baseline;
-    flex-direction: column;
+  margin: 30px auto;
+  display: flex;
+  gap: 15px;
+  max-width: 360px;
+  flex-direction: column;
 
   & button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -14,7 +14,7 @@ export const FormStyled = styled.form`
     font-weight: 500;
     background-color: rgb(81, 203, 238);
     color: white;
-    padding: 0px 15px;
+    padding: 0px 25px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -22,6 +22,9 @@ export const FormStyled = styled.form`
     position: relative;
     overflow: hidden;
     height: 36px;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     gap: 10px;

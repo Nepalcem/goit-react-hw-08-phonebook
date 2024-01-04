@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { brownAccent } from 'utils/globalVariables';
 
 export const UserMenuDiv = styled.div`
  display: flex;
@@ -10,6 +11,7 @@ export const UserGreetingText = styled.p`
   font-weight: 500;
   font-size: 12px;
   margin-bottom: 4px;
+  color: ${brownAccent}
 `;
 
 export const LogOutButton = styled.button`

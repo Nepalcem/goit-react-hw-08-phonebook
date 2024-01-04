@@ -8,7 +8,7 @@ import { RestrictedRoute } from './routes/RestrictedRoute';
 import { PrivateRoute } from './routes/PrivateRoute';
 import { ToastContainer } from 'react-toastify';
 
-const HomePage = lazy(() => import('./pages/Home'));
+const HomePage = lazy(() => import('./pages/Home/Home'));
 const RegisterPage = lazy(() => import('./pages/registerPage/RegisterPage'));
 const LoginPage = lazy(() => import('./pages/loginPage/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));

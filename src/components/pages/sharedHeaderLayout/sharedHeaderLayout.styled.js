@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { tablet } from 'utils/deviceBreakPoints';
-import { desktop } from 'utils/deviceBreakPoints';
+import { tablet } from 'utils/globalVariables';
+import { desktop } from 'utils/globalVariables';
 
 export const Container = styled.div`
   max-width: 1024px;
@@ -49,7 +49,7 @@ export const NavigationLink = styled(NavLink)`
   font-weight: 500;
   background-color: rgb(81, 203, 238);
   transition: all 0.25s ease-in-out;
-  &:nth-child(n+2) {
+  &:nth-child(n + 2) {
     margin-right: auto;
   }
   &:hover {

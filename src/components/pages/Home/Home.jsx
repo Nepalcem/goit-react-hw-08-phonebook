@@ -1,10 +1,13 @@
 import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
 import React from 'react';
+import { MainHtag } from './homePage.styled';
 
 function Home() {
+
+
   return (
     <ContentBlock>
-      <h1> Welcome to <br></br>Phonebook app</h1>
+      <MainHtag>Welcome to Phonebook App</MainHtag>
     </ContentBlock>
   );
 }
