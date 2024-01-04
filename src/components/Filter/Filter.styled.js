@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { tablet } from 'utils/globalVariables';
 
 export const FilterStyled = styled.form`
   & label {
@@ -21,5 +22,19 @@ export const FilterStyled = styled.form`
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     padding: 9px;
     border: 1px solid rgba(81, 203, 238, 1);
+  }
+`;
+
+export const FilterBlock = styled.div`
+  @media screen and (max-width: ${tablet}) {
+    & h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: ${tablet}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 `;

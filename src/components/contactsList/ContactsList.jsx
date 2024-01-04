@@ -15,7 +15,6 @@ const ContactsList = () => {
   const contacts = useSelector(getVisibleContacts);
   return (
     <div className="contacts">
-      <h2>Contacts List:</h2>
       {isLoading && !errorMessage && <b>Request in progress...</b>}
       <ContactsStyled>
         {contacts.map(({ name, id, number }) => (

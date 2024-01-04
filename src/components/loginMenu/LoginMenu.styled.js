@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
+import { tablet } from 'utils/globalVariables';
 
 export const LoginLink = styled(NavLink)`
   color: white;
   padding: 12px 9px;
+  @media screen and (min-width:${tablet}) {
+    padding: 12px 16px;
+  }
   border: none;
   border-radius: 10px;
   cursor: pointer;

@@ -8,11 +8,13 @@ function ContactLayout() {
   return (
     <div>
       <ContentBlock>
-      <h1>PhoneBook</h1>
-      <Form></Form>
-      <Filter></Filter>
+        <h1>Add a new contact</h1>
+        <Form></Form>
       </ContentBlock>
-      <ContactsList></ContactsList>
+      <ContentBlock>
+        <Filter />
+      </ContentBlock>
+      <ContactsList />
     </div>
   );
 }
