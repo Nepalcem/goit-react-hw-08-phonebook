@@ -12,8 +12,18 @@ const ContactsList = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
   const errorMessage = useSelector(getError);
-
   const contacts = useSelector(getVisibleContacts);
+
+  const handleDelete = (id, name) => {
+     const isConfirmed = window.confirm(
+       `Do you want to delete ${name} from your contacts?`
+     );
+
+     if (isConfirmed) {
+       dispatch(deleteContact(id));
+     }
+  }
+  
   return (
     <div className="contacts">
       {isLoading && !errorMessage && <b>Request in progress...</b>}
@@ -30,7 +40,7 @@ const ContactsList = () => {
             <EditModal id={id} name={name} number={number} />
             <StyledTrashIcon
               onClick={() => {
-                dispatch(deleteContact(id));
+                handleDelete(id, name)
               }}
             ></StyledTrashIcon>
           </li>
