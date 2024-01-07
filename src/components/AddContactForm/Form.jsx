@@ -6,7 +6,7 @@ import { addContact } from 'api-functions/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, getIsAddContactPending } from 'redux/selectors';
 import { FormTextField } from 'components/pages/registerPage/RegisterPage.styled';
-
+import { toast } from 'react-toastify';
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -40,6 +40,10 @@ const Form = () => {
 
   const submitHandler = e => {
     e.preventDefault();
+    if (name.trim().length === 0 || number.trim().length === 0) {
+      toast.warning('Name or phone must not be empty!');
+      return;
+    }
     const newContact = addContactItem(name, number);
     if (newContact === null) {
       return alert(`${name} is already in contacts`);
@@ -52,41 +56,39 @@ const Form = () => {
 
   return (
     <FormStyled onSubmit={submitHandler}>
-        <FormTextField
-          type="text"
-          name="name"
-          pattern="^[A-Za-z\u0080-\uFFFF ']+$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-          onChange={handleChange}
-          value={name}
-          autoComplete="off"
-          label="Name"
-          variant="outlined"
-        />
-        <FormTextField
-          type="tel"
-          name="number"
-          pattern="^(\+?[0-9.\(\)\-\s]*)$"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-          onChange={handleChange}
-          value={number}
-          autoComplete="off"
-          label="Phone"
-          variant="outlined"
-        />
+      <FormTextField
+        type="text"
+        name="name"
+        pattern="^[A-Za-z\u0080-\uFFFF ']+$"
+        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+        required
+        onChange={handleChange}
+        value={name}
+        autoComplete="off"
+        label="Name"
+        variant="outlined"
+      />
+      <FormTextField
+        type="tel"
+        name="number"
+        pattern="^(\+?[0-9.\(\)\-\s]*)$"
+        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+        required
+        onChange={handleChange}
+        value={number}
+        autoComplete="off"
+        label="Phone"
+        variant="outlined"
+      />
 
-        <button type="submit" disabled={isAddContactLoading}>
-          {isAddContactLoading ? (
-            <LuLoader2 className="loading-icon"></LuLoader2>
-          ) : (
-            <FaPlus></FaPlus>
-          )}{' '}
-          Add Contact
-        </button>
-
-      
+      <button type="submit" disabled={isAddContactLoading}>
+        {isAddContactLoading ? (
+          <LuLoader2 className="loading-icon"></LuLoader2>
+        ) : (
+          <FaPlus></FaPlus>
+        )}{' '}
+        Add Contact
+      </button>
     </FormStyled>
   );
 };
