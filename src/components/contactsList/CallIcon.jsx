@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCallIcon } from '../EditModal/EditIcon.styled';
+import { StyledCallIcon } from './TrashIcon.styled';
 
 export default function CallIcon({ href }) {
   return (

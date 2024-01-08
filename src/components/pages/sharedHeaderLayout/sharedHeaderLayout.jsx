@@ -9,6 +9,7 @@ import { Suspense } from 'react';
 import { useAuthorize } from 'components/hooks/useAuthorize';
 import UserMenu from 'components/userMenu/UserMenu';
 import LoginMenu from 'components/loginMenu/LoginMenu';
+import Footer from 'components/Footer/Footer';
 
 export const SharedHeaderLayout = () => {
   const { isLoggedIn } = useAuthorize();
@@ -28,6 +29,7 @@ export const SharedHeaderLayout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
+      <Footer/>
     </Container>
   );
 };

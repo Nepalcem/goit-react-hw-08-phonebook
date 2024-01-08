@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { ContactsStyled } from './ContactsList.styled';
-import { StyledTrashIcon, StyledCallIcon } from './TrashIcon.styled';
-
+import { StyledTrashIcon } from './TrashIcon.styled';
 import { getError, getIsLoading, getVisibleContacts } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 import { deleteContact } from 'api-functions/api';
 import EditModal from 'components/EditModal/EditModal';
+import CallIcon from './CallIcon';
 
 const ContactsList = () => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const ContactsList = () => {
               </span>
               <span className="phone">{number} </span>
             </div>
-            <StyledCallIcon href={number} />
+            <CallIcon href={number} />
             <EditModal id={id} name={name} number={number} />
             <StyledTrashIcon
               onClick={() => {

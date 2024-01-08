@@ -18,9 +18,12 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   gap: 12px;
-  padding: 8px 0;
+  padding: 8px 20px;
   margin-bottom: 16px;
-  border-bottom: 1px solid black;
+  background: rgba(133, 255, 250, 0.12);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border: 1px solid rgba(133, 255, 250, 0.3);
 `;
 
 export const StyledNav = styled.nav`

@@ -5,7 +5,10 @@ export const mainModalStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 300,
+  width: 240,
+  '@media (min-width: 768px)': {
+    width: 300, // Adjust the width for screens wider than 600px
+  },
   bgcolor: 'background.paper',
   borderRadius: 2,
   boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px',
