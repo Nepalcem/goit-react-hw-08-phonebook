@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import { desktop } from 'utils/globalVariables';
+import { desktop, mainBlueAccent } from 'utils/globalVariables';
+import { FaPhoneVolume } from 'react-icons/fa6';
+import { SlGlobe } from 'react-icons/sl';
+import { FaLock } from 'react-icons/fa';
+import { FcSearch } from 'react-icons/fc';
+import { FcPhoneAndroid } from 'react-icons/fc';
+
+
+
+
+
 
 export const StyledHomeImg = styled.img`
   height: auto;
@@ -32,3 +42,22 @@ export const StyledHomeDiv = styled.div`
 export const StyledHomeList = styled.ul`
   list-style: none;
 `;
+
+export const StyledHomeListItem = styled.li`
+  margin-bottom: 5px;
+`;
+
+export const StyledHomePhoneIcon = styled(FaPhoneVolume)`
+  color: #800020;
+`;
+
+export const StyledHomeGlobeIcon = styled(SlGlobe)`
+  color: ${mainBlueAccent};
+`;
+
+export const StyledHomeLockIcon = styled(FaLock)`
+  color: #ffc300;
+`;
+
+export const StyledHomeSearchIcon = styled(FcSearch)``;
+export const StyledHomeAccessIcon = styled(FcPhoneAndroid)``;
