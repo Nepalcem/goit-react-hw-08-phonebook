@@ -1,13 +1,14 @@
 import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
 import React from 'react';
-import { MainHtag } from './homePage.styled';
+import TypedText from './TypedText/TypedText';
+
 
 function Home() {
 
 
   return (
     <ContentBlock>
-      <MainHtag>Welcome to Phonebook App</MainHtag>
+      <TypedText text="Welcome to the best Phonebook app in your life! :)" delay={100}/>
     </ContentBlock>
   );
 }

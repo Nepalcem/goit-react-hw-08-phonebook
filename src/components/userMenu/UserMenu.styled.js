@@ -21,7 +21,7 @@ export const LogOutButton = styled.button`
   background-color: rgb(238, 75, 43);
   color: white;
   padding: 8px;
-  height: 47px;
+  height: 45px;
   @media screen and (min-width: ${tablet}) {
     padding: 4px 8px;
     height: auto;

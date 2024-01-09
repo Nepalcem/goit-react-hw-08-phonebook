@@ -14,17 +14,31 @@ export const StyledFooter = styled.footer`
 `;
 
 export const OwnerName = styled.span`
-display: block;
-`
+  display: block;
+  font-weight: 500;
+`;
 
 export const SocialElement = styled.li`
   cursor: pointer;
+  & a[href*='linkedin'] :hover {
+    color: #0e76a8;
+  }
+  & a[href*='git'] :hover {
+    color: #f1502f;
+  }
+  & a[href*='t.me'] :hover {
+    color: #229ed9;
+  }
+  & a[href*='mailto'] :hover {
+    color: #ea4335;
+  }
 `;
 
 export const SocialUl = styled.ul`
   display: flex;
   gap: 10px;
   list-style: none;
+  align-items: center;
 `;
 
 export const LinkedInIcon = styled(LinkedIn)`
