@@ -5,6 +5,7 @@ import { SlGlobe } from 'react-icons/sl';
 import { FaLock } from 'react-icons/fa';
 import { FcSearch } from 'react-icons/fc';
 import { FcPhoneAndroid } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 
 
@@ -61,3 +62,12 @@ export const StyledHomeLockIcon = styled(FaLock)`
 
 export const StyledHomeSearchIcon = styled(FcSearch)``;
 export const StyledHomeAccessIcon = styled(FcPhoneAndroid)``;
+
+export const StyledLoginLink = styled(Link)`
+  font-weight: 500;
+  color: #800020;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    color: ${mainBlueAccent};
+  }
+`;

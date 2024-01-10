@@ -1,18 +1,22 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { ContactsStyled } from './ContactsList.styled';
+import { ContactListWrapper, ContactsStyled } from './ContactsList.styled';
 import { StyledTrashIcon } from './TrashIcon.styled';
 import { getError, getIsLoading, getVisibleContacts } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 import { deleteContact } from 'api-functions/api';
 import EditModal from 'components/EditModal/EditModal';
 import CallIcon from './CallIcon';
+import { Loader } from './ContactsPreloader/ContactsPreloader';
 
 const ContactsList = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
   const errorMessage = useSelector(getError);
   const contacts = useSelector(getVisibleContacts);
+
+  const haveContacts = !!contacts.length;
+ 
 
   const handleDelete = (id, name) => {
      const isConfirmed = window.confirm(
@@ -25,8 +29,8 @@ const ContactsList = () => {
   }
   
   return (
-    <div className="contacts">
-      {isLoading && !errorMessage && <b>Request in progress...</b>}
+    <ContactListWrapper haveContacts={haveContacts}>
+      {isLoading && !errorMessage && <Loader />}
       <ContactsStyled>
         {contacts.map(({ name, id, number }) => (
           <li key={id} className="item">
@@ -40,13 +44,13 @@ const ContactsList = () => {
             <EditModal id={id} name={name} number={number} />
             <StyledTrashIcon
               onClick={() => {
-                handleDelete(id, name)
+                handleDelete(id, name);
               }}
             ></StyledTrashIcon>
           </li>
         ))}
       </ContactsStyled>
-    </div>
+    </ContactListWrapper>
   );
 };
 

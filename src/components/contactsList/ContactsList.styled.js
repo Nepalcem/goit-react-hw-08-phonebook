@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
+export const ContactListWrapper = styled.div`
+  position: relative;
+  min-height: ${props => (props.haveContacts ? 'auto' : '150px')};
+`;
+
 export const ContactsStyled = styled.ul`
   display: flex;
   flex-direction: column;
+
 
   & .contact__data {
     display: flex;

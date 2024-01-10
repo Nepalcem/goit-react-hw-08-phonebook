@@ -4,6 +4,7 @@ import { logIn } from 'redux/authorize/operations';
 
 import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
 import SignupForm from 'components/SignupForm/SignupForm';
+import AllreadyAccount from 'components/AlreadyAccountBlock/AllreadyAccount';
 
 function LoginPage() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function LoginPage() {
     <ContentBlock>
       <h2>Login to your Account</h2>
       <SignupForm isLogin={true} onSubmit={handleSubmit} />
+      <AllreadyAccount isLogin={true}/>
     </ContentBlock>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeBlockImg from '../../../media/images/phonebook_v4_c.jpg';
+import HomeBlockImg from '../../../media/images/phonebook_v5_b.jpg';
 import {
   StyledHomeImg,
   StyledHomeText,
@@ -11,7 +11,9 @@ import {
   StyledHomeSearchIcon,
   StyledHomeAccessIcon,
   StyledHomeListItem,
+  StyledLoginLink
 } from './HomeContent.styled';
+
 
 export default function HomeContent() {
   return (
@@ -46,7 +48,7 @@ export default function HomeContent() {
           </StyledHomeListItem>
           <StyledHomeListItem>
             <StyledHomeAccessIcon style={{ fontSize: 20 }} /> Try it Now –
-            Hassle-Free Login: Explore the functionality with pre-entered login
+            Hassle-Free <StyledLoginLink to="/login">Login</StyledLoginLink> : Explore the functionality with pre-entered login
             details on our Login page. Experience the convenience firsthand!
           </StyledHomeListItem>
         </StyledHomeList>

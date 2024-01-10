@@ -20,6 +20,9 @@ export const OwnerName = styled.span`
 
 export const SocialElement = styled.li`
   cursor: pointer;
+  & svg{
+    transition: all 0.25s ease-in-out;
+  }
   & a[href*='linkedin'] :hover {
     color: #0e76a8;
   }
@@ -42,15 +45,19 @@ export const SocialUl = styled.ul`
 `;
 
 export const LinkedInIcon = styled(LinkedIn)`
+ 
   color: black;
 `;
 
 export const TelegramInIcon = styled(Telegram)`
+
   color: black;
 `;
 export const GitHubIcon = styled(GitHub)`
+ 
   color: black;
 `;
 export const MailInIcon = styled(Email)`
+
   color: black;
 `;
