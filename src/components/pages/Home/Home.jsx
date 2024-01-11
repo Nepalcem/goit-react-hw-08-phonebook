@@ -3,9 +3,6 @@ import TypedText from './TypedText/TypedText';
 import { ContentBlock } from 'components/ContactLayout/ContactLayout.styled';
 import HomeContent from './HomeContent/HomeContent';
 
-
-
-
 function Home() {
 
 

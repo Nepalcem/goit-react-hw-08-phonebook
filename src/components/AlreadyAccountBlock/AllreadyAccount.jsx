@@ -7,13 +7,11 @@ export default function AllreadyAccount({ isLogin }) {
     <>
       {isLogin ? (
         <AllreadyStyledBlock>
-          Don't have an account?
-          <StyledLoginLink to="/register">Register</StyledLoginLink> here
+          Don't have an account? <StyledLoginLink to="/register">Register</StyledLoginLink> here.
         </AllreadyStyledBlock>
       ) : (
         <AllreadyStyledBlock>
-          Already registered?
-          <StyledLoginLink to="/login">Login</StyledLoginLink> here
+          Already registered? <StyledLoginLink to="/login">Login</StyledLoginLink> here.
         </AllreadyStyledBlock>
       )}
     </>

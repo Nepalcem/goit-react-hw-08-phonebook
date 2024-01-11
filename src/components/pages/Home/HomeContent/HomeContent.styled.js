@@ -7,11 +7,6 @@ import { FcSearch } from 'react-icons/fc';
 import { FcPhoneAndroid } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 
-
-
-
-
-
 export const StyledHomeImg = styled.img`
   height: auto;
   max-width: 100%;

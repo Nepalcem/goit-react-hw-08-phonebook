@@ -7,7 +7,7 @@ export const mainModalStyle = {
   transform: 'translate(-50%, -50%)',
   width: 240,
   '@media (min-width: 768px)': {
-    width: 300, // Adjust the width for screens wider than 600px
+    width: 300,
   },
   bgcolor: 'background.paper',
   borderRadius: 2,

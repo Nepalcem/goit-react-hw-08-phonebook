@@ -7,9 +7,6 @@ import CloseIcon from './CloseIcon/CloseIcon';
 import { IconButton } from '@mui/material';
 import { mainModalStyle, closeButtonStyle } from './modalStyles';
 
-
-
-
 export default function EditModal({ id, name, number }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
