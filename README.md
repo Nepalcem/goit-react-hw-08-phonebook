@@ -4,13 +4,10 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
 📞 Unlock the Power of Connectivity with Our Phone Book App!
-
 Looking for a seamless way to manage your contacts? Look no further! Our cutting-edge phone book application is designed to simplify your life and keep your contacts organized.
 
 🌐 Accessible Anywhere, Anytime:
@@ -32,3 +29,9 @@ Explore the functionality with pre-entered login details on our Login page. Expe
 To install the project dependencies, run the following command:
 ```bash
 npm install
+```
+## Usage
+To run the project use:
+```bash
+npm start
+```
