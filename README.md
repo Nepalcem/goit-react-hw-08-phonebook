@@ -9,18 +9,9 @@
 
 ## Features
 
-- List key features and functionalities of your project.
+📞 Unlock the Power of Connectivity with Our Phone Book App!
 
-## Installation
-
-Provide step-by-step instructions on how to install your project. Include any dependencies and how to install them.
-
-```bash
-# Example installation command
-npm install your-package-name
-
- Unlock the Power of Connectivity with Our Phone Book App! Looking for a seamless way to manage your contacts? Look no further! 
- Our cutting-edge phone book application is designed to simplify your life and keep your contacts organized.
+Looking for a seamless way to manage your contacts? Look no further! Our cutting-edge phone book application is designed to simplify your life and keep your contacts organized.
 
 🌐 Accessible Anywhere, Anytime:
 Access your contacts from anywhere in the world. Whether you're at home, at the office, or on the go, your phone book is just a tap away.
@@ -36,3 +27,10 @@ Find the right contact in seconds with our powerful search feature. No more scro
 
 📱 Try it Now – Hassle-Free Login:
 Explore the functionality with pre-entered login details on our Login page. Experience the convenience firsthand!
+
+## Installation
+
+```bash
+# git commans
+npm install
+npm start
