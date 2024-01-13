@@ -36,4 +36,4 @@ To run the project use:
 npm start
 ```
 ## Technologies Used
-[![Technologies Used](https://github-readme-tech-stack.vercel.app/api/cards?title=Technologies+Used&align=center&titleAlign=center&lineCount=1&width=600&bg=%230D1117&badge=%23161B22&border=%2321262D&titleColor=%2358A6FF&line1=react%2Creact%2C00e3ff%3Bredux%2Credux%2Cf7ef7d%3Bwebpack%2Cwebpack%2Cbe58ff%3Btypescript%2Ctypescript%2C008afa%3B)
+![ ](https://github-readme-tech-stack.vercel.app/api/cards?title=Technologies+Used&align=center&titleAlign=center&lineCount=1&width=600&bg=%230D1117&badge=%23161B22&border=%2321262D&titleColor=%2358A6FF&line1=react%2Creact%2C00e3ff%3Bredux%2Credux%2Cf7ef7d%3Bwebpack%2Cwebpack%2Cbe58ff%3Btypescript%2Ctypescript%2C008afa%3B)
