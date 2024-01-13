@@ -29,10 +29,6 @@ Find the right contact in seconds with our powerful search feature. No more scro
 Explore the functionality with pre-entered login details on our Login page. Experience the convenience firsthand!
 
 ## Installation
-# git command
+To install the project dependencies, run the following command:
 ```bash
 npm install
-
-## Usage
-```bash
-npm start
