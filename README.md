@@ -35,3 +35,10 @@ To run the project use:
 ```bash
 npm start
 ```
+## Technologies Used
+
+- **React:** A JavaScript library for building user interfaces. [React Documentation](https://reactjs.org/)
+- **Redux:** A predictable state container for JavaScript apps. [Redux Documentation](https://redux.js.org/)
+- **React Router:** Declarative routing for React.js. [React Router Documentation](https://reactrouter.com/)
+- **Styled Components:** CSS-in-JS library for styling React components. [Styled Components Documentation](https://styled-components.com/)
+- **Axios:** A promise-based HTTP client for the browser and Node.js. [Axios Documentation](https://axios-http.com/)
